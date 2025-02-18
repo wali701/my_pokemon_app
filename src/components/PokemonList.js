@@ -4,7 +4,7 @@ import PokemonCard from "./PokemonCard";
 import "./PokemonList.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// Function to generate a random color
+
 const getRandomColor = () => {
   const letters = "0123456789ABCDEF";
   let color = "#";
@@ -75,7 +75,7 @@ const PokemonList = () => {
         onChange={handleSearchChange}
       />
 
-      {error && <p className="error">{error}</p>} {/* Display error message */}
+      {error && <p className="error">{error}</p>} 
       
       {filteredPokemon.length > 0 ? (
         filteredPokemon.map((p, index) => (

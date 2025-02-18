@@ -1,9 +1,9 @@
-/* Apply flexbox to the parent container */
+
 .pokemon-list-wrapper {
     display: flex;
-    justify-content: center;  /* Horizontally center */
-    align-items: center;  /* Vertically center */
-    min-height: 100vh;  /* Ensure full height */
+    justify-content: center;  
+    align-items: center;  
+    min-height: 100vh;  
     padding: 20px;
   }
   

@@ -7,7 +7,7 @@ const SearchBar = ({ onSearch }) => {
   const handleChange = (e) => {
     const value = e.target.value;
     setSearchTerm(value);
-    onSearch(value); // Call parent component's search handler
+    onSearch(value); 
   };
 
   return (
@@ -20,9 +20,9 @@ const SearchBar = ({ onSearch }) => {
         value={searchTerm}
         onChange={handleChange}
       />
-      {/* Only one search button */}
+      
       <button className="btn btn-outline-success" type="button">
-        <i className="bi bi-search"></i> {/* Bootstrap Search Icon */}
+        <i className="bi bi-search"></i> 
       </button>
     </form>
   );

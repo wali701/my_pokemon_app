@@ -3,7 +3,7 @@
     border-radius: 20px;
     margin-bottom: 15px;
     display: inline-block;
-    width: calc(60% -10px);  /* Adjusts the card size */
+    width: calc(60% -10px);  
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }

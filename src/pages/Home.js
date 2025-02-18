@@ -4,12 +4,12 @@ import PokemonList from "../components/PokemonList";
 import "./Home.css";
 
 const Home = () => {
-  const [filteredPokemon, setFilteredPokemon] = useState([]); // Store filtered Pokémon
+  const [filteredPokemon, setFilteredPokemon] = useState([]); 
 
-  // Memoize loadPokemon using useCallback
+  
   const loadPokemon = useCallback(async () => {
     try {
-      const data = await getPokemonList(10, 0); // Load 10 Pokémon at a time
+      const data = await getPokemonList(10, 0); 
       const pokemonDetails = await Promise.all(
         data.results.map(async (pokemon) => {
           const details = await fetch(pokemon.url).then((res) => res.json());
@@ -17,21 +17,21 @@ const Home = () => {
         })
       );
 
-      // Set the loaded Pokémon as the main list
-      setFilteredPokemon(pokemonDetails); // Set filteredPokemon initially to the full list
+      
+      setFilteredPokemon(pokemonDetails); 
     } catch (error) {
       console.error("Failed to load Pokémon:", error);
     }
-  }, []); // Load Pokémon only once on mount
+  }, []); 
 
-  // Effect to load Pokémon initially
+  
   useEffect(() => {
     loadPokemon();
-  }, [loadPokemon]); // Only run once when the component mounts
+  }, [loadPokemon]); 
 
   return (
     <div className="home-container">
-      {/* Render the Pokémon list */}
+      
       <PokemonList pokemon={filteredPokemon} />
     </div>
   );
