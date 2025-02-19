@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { getPokemonList } from "../services/api";
+import { getPokemonList } from "../../services/api";
 import PokemonList from "../components/PokemonList";
 import "./Home.css";
 
