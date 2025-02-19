@@ -86,7 +86,7 @@ const PokemonList = () => {
           >
             <PokemonCard
               name={p.name}
-              image={p.sprites?.front_default || "https://via.placeholder.com/100"}
+              image={p.sprites.front_default || "https://via.placeholder.com/100"}
               height={p.height / 10}
               weight={p.weight / 10}
             />
